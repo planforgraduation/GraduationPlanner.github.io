@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<!-- 
+    	Boxer Template
+    	http://www.templatemo.com/tm-446-boxer
+    	-->
+		<meta charset="utf-8">
+		<title>Graduation Planner</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<!-- animate css -->
+		<link rel="stylesheet" href="css/animate.min.css">
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- google font -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800' rel='stylesheet' type='text/css'>
+
+		<!-- custom css -->
+		<link rel="stylesheet" href="css/templatemo-style.css">
+		<link rel="icon" type="image/x-icon" href="/images/fluent_hat-graduation-28-regular.png">
+
+
+	</head>
+	<body>
+		<!-- start preloader -->
+		<div class="preloader">
+			<div class="sk-spinner sk-spinner-rotating-plane"></div>
+    	 </div>
+		<!-- end preloader -->
+		<!-- start navigation -->
+		<nav class="navbar navbar-default navbar-fixed-top templatemo-nav" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+					<!-- <a href="#" class="navbar-brand">Graduation <span class="planner-text">Planner</span></a> -->
+					<a href="#home" class="navbar-brand">Graduation Planner</a>
+
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right text-uppercase">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#divider">Student Problems</a></li>
+						<li><a href="#feature1">Solution</a></li>
+						<li><a href="#pricing">Pricing</a></li>
+						<li><a href="#contact">Sign Up!</a></li>
+						<!-- <li><button onClick="document.getElementById('contact').scrollIntoView();" class="btn btn-primary text-uppercase">Sign up</button></li> -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- end navigation -->
+		<!-- start home -->
+		<section id="home">
+			<div class="overlay">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10 wow fadeIn" data-wow-delay="0.3s">
+							<h1 class="text-upper">Customizable Graduation Planner</h1>
+							<p class="tm-white">We understand that planning out your classes until graduation can be confusing,
+								so we are simplifying the process for you at $3 a semester!</p>
+								<!-- <div class="container">
+									<div class="row">
+										<div class="col-md-6">
+											<input type="text" class="form-control" placeholder="john.doe@gmail.com">
+										</div>
+										<div class="col-md-6">
+											<button class="btn text-uppercase" style="background-color: red;">Sign Up for Early Access!</button>
+
+										</div>
+									</div>
+								</div> -->
+								<div class="row">
+								<!-- <form action="#" method="post"> -->
+									<div class="col-md-12">
+
+									<div id="mail-success-message" class="alert alert-success" style="display: none;">
+										<strong>Thank you for signing up!</strong> We will keep in contact with you.
+									</div>
+									<div id="mail-error-message" class="alert alert-danger" style="display: none;">
+										<strong>Oh no!</strong> An unexpected error occured.
+									</div>
+									</div>
+									<div class="col-md-7">
+										<input type="email" id="email-input" class="form-control email-input" placeholder="Email"/>
+									</div>
+									<div class="col-md-5">
+										<input onclick="sendMail()" type="submit" class="form-control early-access-button" value="Sign Up for Early Access!"/>
+									</div>
+								<!-- </form> -->
+							</div>
+							<img src="images/Laptop Image2 (1).svg" class="img-responsive" alt="home img">
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end home -->
+		<!-- start divider -->
+		<section id="divider">
+			<!-- <div id="feature"> -->
+			<div class="container">
+				<h1 class="text-upper">Problems We Have Heard From Students</h1>
+				<div class="row">
+					<div class="col-md-3 wow fadeInUp templatemo-box" data-wow-delay="0.3s">
+						<i class="fa fa-laptop"></i>
+						<h3>Planning classes can be difficult and confusing</h3>
+						<p>Students have expressed great difficulty in trying to plan classes and can be very confused.</p>
+					</div>
+					<div class="col-md-3 wow fadeInUp templatemo-box" data-wow-delay="0.3s">
+						<i class="fa fa-frown-o" aria-hidden="true"></i>
+						<h3>Advisors telling you what classes to take can be unreliable</h3>
+						<p>Advsiors can sometimes give you wrong advice and put you in a bad position, possibly putting you behind on your degree.</p>
+					</div>
+					<div class="col-md-3 wow fadeInUp templatemo-box" data-wow-delay="0.3s">
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
+						<h3>Knowing what class you can/must take to graduate can be unclear</h3>
+						<p>Recognizing what classes are necessary to take for you to graduate on time can be unclear and frightening.</p>
+					</div>
+					<div class="col-md-3 wow fadeInUp templatemo-box" data-wow-delay="0.3s">
+						<i class="fa fa-file-text-o" aria-hidden="true"></i>
+						<h3>Excel sheets are sometimes used to plan classes</h3>
+						<p>Student have resulted to planning their classes on spreadsheets. This can also be unreliable if a mistake is made.</p>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+		</section>
+		<!-- end divider -->
+
+		<!-- start feature -->
+		<!-- <section id="solution">
+			<div class="container">
+				<h1 class="text-upper" style="text-align: center;">Solution We Are Building</h1>
+
+				<div class="row">
+					<div class="col-md-6 wow fadeInLeft" data-wow-delay="0.6s">
+						<h2>Intial 4-Year Plan</h2>
+						<p>Initial four year plan laid out in the below format</p>
+						<p><span><i class="fa fa-mobile"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p><i class="fa fa-code"></i>Quis autem velis reprehenderit et quis voluptate velit esse quam.</p>
+					</div>
+					<div class="col-md-6 wow fadeInRight" data-wow-delay="0.6s">
+						<img src="images/Laptop Image.svg" class="img-responsive" alt="feature img">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="feature1">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+						<img src="images/Semester 1.svg" class="img-responsive" alt="feature img">
+					</div>
+					<div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+						<h2>Customizable to Each Student</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p><span><i class="fa fa-mobile"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p><i class="fa fa-code"></i>Quis autem velis reprehenderit et quis voluptate velit esse quam.</p>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!-- end feature1 -->
+		<section id="feature1">
+			<div class="container">
+				<h1 class="text-upper" style="text-align: center;">Solution We Are Building</h1>
+
+				<div class="row">
+					<div class="col-md-6 wow fadeInLeft" data-wow-delay="0.6s">
+						<h2>Customized 4-Year Plan</h2>
+						<p><span><i class="fa fa-th-large" aria-hidden="true"></i>
+						</span>Initial four year plan laid out in this format</p>
+						<p><span><i class="fa fa-cog" aria-hidden="true"></i>
+						</i></span>Allows for customized use by each student</p>
+						<p><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+						</i>Support for 1 major and 1 minor</p>
+						<p><i class="fa fa-envelope-o" aria-hidden="true"></i>Send to counselor for approval</p>
+					</div>
+					<div class="col-md-6 wow fadeInRight" data-wow-delay="0.6s">
+						<img src="images/Laptop Image2 (1).svg" class="img-responsive" alt="feature img">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- start pricing -->
+		<section id="pricing">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 wow bounceIn">
+						<h1>Product Pricing When Built</h1>
+						<p style="padding-bottom: 60px;">(Early Access Students Will Not Be Charged)</p>
+					</div>
+					</div>
+
+					<div class="col-md-4 wow fadeIn"></div>
+					<div class="col-md-4 wow fadeIn" data-wow-delay="0.6s">
+						<div class="pricing active">
+							<div class="pricing-title">
+								<h4 class="text-uppercase">Semester Plan</h4>
+								<p>$2.99</p>
+								<small class="text-lowercase">per semester</small>
+							</div>
+							<ul>
+								<li><i class="fa fa-check-circle" aria-hidden="true"></i>
+									Full Access To Product</li>
+								<li><i class="fa fa-check-circle" aria-hidden="true"></i>
+									Customizable For Each Student</li>
+								<li><i class="fa fa-check-circle" aria-hidden="true"></i>
+									Send Plan To Advisor</li>
+							</ul>
+							<!-- <button class="btn btn-primary text-uppercase">Sign up</button> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end pricing -->
+
+		<!-- start download -->
+		<!-- <section id="download">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 wow fadeInLeft" data-wow-delay="0.6s">
+						<h2 class="text-uppercase">Download Our Software</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
+						<button class="btn btn-primary text-uppercase"><i class="fa fa-download"></i> Download</button>
+					</div>
+					<div class="col-md-6 wow fadeInRight" data-wow-delay="0.6s">
+						<img src="images/software-img.png" class="img-responsive" alt="feature img">
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!-- end download -->
+
+		<!-- start contact -->
+		<!-- <section id="contact">
+			<div class="overlay">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+							<h2 class="text-uppercase">Contact Us</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
+							<address>
+								<p><i class="fa fa-map-marker"></i>36 Street Name, City Name, United States</p>
+								<p><i class="fa fa-phone"></i> 010-010-0110 or 020-020-0220</p>
+								<p><i class="fa fa-envelope-o"></i> info@company.com</p>
+							</address>
+						</div>
+						<div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+							<div class="contact-form">
+								<form action="#" method="post">
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="Name">
+									</div>
+									<div class="col-md-6">
+										<input type="email" class="form-control" placeholder="Email">
+									</div>
+									<div class="col-md-12">
+										<input type="text" class="form-control" placeholder="Subject">
+									</div>
+									<div class="col-md-12">
+										<textarea class="form-control" placeholder="Message" rows="4"></textarea>
+									</div>
+									<div class="col-md-8">
+										<input type="submit" class="form-control text-uppercase" value="Send">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!-- end contact -->
+		<section id="contact">
+			<div class="overlay">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+							<h2 class="text-uppercase">Sign up for Early Access!</h2>
+							<p>Sign up to access the product early! We will give you free access so you can give us feedback on what we can improve on to make yours and other students' graduation planning easier!</p>
+							<address>
+								<a href="https://mail.google.com/mail/?view=cm&fs=1&to=planforgraduation@gmail.com" target="_blank" style="text-decoration: none; color: white;"><i class="fa fa-envelope-o"></i> planforgraduation@gmail.com</a>
+							</address>
+						</div>
+						<div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+							<div class="contact-form">
+								<!-- <form action="#" method="post"> -->
+								<div class="col-md-10">
+									<div id="contact-success-message" class="alert alert-success" style="display: none;">
+										<strong>Thank you for signing up!</strong> We will keep in contact with you.
+									</div>
+									<div id="contact-error-message" class="alert alert-danger" style="display: none;">
+										<strong>Oh no!</strong> An unexpected error occured.
+									</div>
+								</div>
+									<div class="col-md-10">
+										<input id="contact-input" type="email" class="form-control" placeholder="Email">
+									</div>
+									<div class="col-md-10">
+										<input onclick="sendContact()"type="submit" class="form-control text-uppercase" value="Sign Up">
+									</div>
+								<!-- </form> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- start footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<p>Copyright © 2024 PlanForGraduation</p>
+				</div>
+			</div>
+		</footer>
+		<!-- end footer -->
+        
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/jquery.singlePageNav.min.js"></script>
+		<script src="js/custom.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function() {
+					// https://dashboard.emailjs.com/admin/account
+					emailjs.init({
+						publicKey: "XnB5IkAd2OzSeaNmP",
+					});
+			})();
+	</script>
+		<script>
+			const delay = ms => new Promise(res => setTimeout(res, ms));
+
+			function sendMail () {
+				const params = {
+					from_name: document.getElementById("email-input").value,
+					email_id: document.getElementById("email-input").value,
+					message: "This is a new user sign up!"
+				}
+				emailjs.send("gmail","template_duy60xg", params).then(async function (res) {
+					document.getElementById("mail-success-message").style.display = "block";
+					document.getElementById("email-input").value = "";
+					await delay(5000);
+					document.getElementById("mail-success-message").style.display = "none";
+				}).catch(async function(err) {
+					document.getElementById("mail-error-message").style.display = "block";
+					document.getElementById("email-input").value = "";
+					await delay(5000);
+					document.getElementById("mail-error-message").style.display = "none";
+        })
+			}
+
+			function sendContact () {
+				const params = {
+					from_name: document.getElementById("contact-input").value,
+					email_id: document.getElementById("contact-input").value,
+					message: "This is a new user sign up!"
+				}
+					emailjs.send("gmail","template_duy60xg", params).then(async function (res) {
+					document.getElementById("contact-success-message").style.display = "block";
+					document.getElementById("contact-input").value = "";
+					await delay(5000);
+					document.getElementById("contact-success-message").style.display = "none";
+				}).catch(async function(err) {
+					document.getElementById("contact-error-message").style.display = "block";
+					document.getElementById("contact-input").value = "";
+					await delay(5000);
+					document.getElementById("contact-error-message").style.display = "none";
+        })
+			}
+				
+		</script>
+	</body>
+</html>
