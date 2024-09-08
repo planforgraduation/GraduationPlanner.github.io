@@ -68,8 +68,10 @@
 						<div class="col-md-1"></div>
 						<div class="col-md-10 wow fadeIn" data-wow-delay="0.3s">
 							<h1 class="text-upper">Customizable Graduation Planner</h1>
-							<p class="tm-white">We understand that planning out your classes until graduation can be confusing,
-								so we are simplifying the process for you at $3 a semester!</p>
+							<!-- <p class="tm-white">We understand that planning out your classes until graduation can be confusing,
+								so we are simplifying the process for you at $3 a semester!</p> -->
+								<p class="tm-white">We understand that planning out your classes until graduation can be difficult and confusing,
+									so we are simplifying the process for you!</p>
 								<!-- <div class="container">
 									<div class="row">
 										<div class="col-md-6">
@@ -314,7 +316,7 @@
 										<input id="contact-input" type="email" class="form-control" placeholder="Email">
 									</div>
 									<div class="col-md-10">
-										<input onclick="sendContact()"type="submit" class="form-control text-uppercase" value="Sign Up">
+										<input onclick="sendContact()"type="submit" class="form-control text-uppercase" value="Sign Up For Early Access">
 									</div>
 								<!-- </form> -->
 							</div>
@@ -351,42 +353,58 @@
 		<script>
 			const delay = ms => new Promise(res => setTimeout(res, ms));
 
-			function sendMail () {
-				const params = {
+			async function sendMail () {
+				if (document.getElementById("email-input").value === "") {
+					document.getElementById("email-input").style.boxShadow = "0px 0px 10px red";
+					document.getElementById("email-input").placeholder = "Enter a valid email";
+					await delay(2000);
+					document.getElementById("email-input").style.boxShadow = "none";
+					document.getElementById("email-input").placeholder = "Email";
+				} else {
+					const params = {
 					from_name: document.getElementById("email-input").value,
 					email_id: document.getElementById("email-input").value,
 					message: "This is a new user sign up!"
+					}
+					emailjs.send("gmail","template_duy60xg", params).then(async function (res) {
+						document.getElementById("mail-success-message").style.display = "block";
+						document.getElementById("email-input").value = "";
+						await delay(5000);
+						document.getElementById("mail-success-message").style.display = "none";
+					}).catch(async function(err) {
+						document.getElementById("mail-error-message").style.display = "block";
+						document.getElementById("email-input").value = "";
+						await delay(5000);
+						document.getElementById("mail-error-message").style.display = "none";
+					})
 				}
-				emailjs.send("gmail","template_duy60xg", params).then(async function (res) {
-					document.getElementById("mail-success-message").style.display = "block";
-					document.getElementById("email-input").value = "";
-					await delay(5000);
-					document.getElementById("mail-success-message").style.display = "none";
-				}).catch(async function(err) {
-					document.getElementById("mail-error-message").style.display = "block";
-					document.getElementById("email-input").value = "";
-					await delay(5000);
-					document.getElementById("mail-error-message").style.display = "none";
-        })
 			}
 
-			function sendContact () {
-				const params = {
-					from_name: document.getElementById("contact-input").value,
-					email_id: document.getElementById("contact-input").value,
-					message: "This is a new user sign up!"
+			async function sendContact () {
+				if (document.getElementById("contact-input").value === "") {
+					document.getElementById("contact-input").style.boxShadow = "0px 0px 10px red";
+					document.getElementById("contact-input").placeholder = "Enter a valid email";
+					await delay(2000);
+					document.getElementById("contact-input").style.boxShadow = "none";
+					document.getElementById("contact-input").placeholder = "Email";
+				} else {
+					const params = {
+						from_name: document.getElementById("contact-input").value,
+						email_id: document.getElementById("contact-input").value,
+						message: "This is a new user sign up!"
+					}
+						emailjs.send("gmail","template_duy60xg", params).then(async function (res) {
+						document.getElementById("contact-success-message").style.display = "block";
+						document.getElementById("contact-input").value = "";
+						await delay(5000);
+						document.getElementById("contact-success-message").style.display = "none";
+					}).catch(async function(err) {
+						document.getElementById("contact-error-message").style.display = "block";
+						document.getElementById("contact-input").value = "";
+						await delay(5000);
+						document.getElementById("contact-error-message").style.display = "none";
+					})
 				}
-					emailjs.send("gmail","template_duy60xg", params).then(async function (res) {
-					document.getElementById("contact-success-message").style.display = "block";
-					document.getElementById("contact-input").value = "";
-					await delay(5000);
-					document.getElementById("contact-success-message").style.display = "none";
-				}).catch(async function(err) {
-					document.getElementById("contact-error-message").style.display = "block";
-					document.getElementById("contact-input").value = "";
-					await delay(5000);
-					document.getElementById("contact-error-message").style.display = "none";
-        })
 			}
 				
 		</script>
